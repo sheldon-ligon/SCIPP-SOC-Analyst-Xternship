@@ -122,3 +122,91 @@ The assessment demonstrated that vulnerability severity alone does not determine
 #### Outcome
 
 By the end of Week 2, I had completed the vulnerability assessment, analyzed and prioritized key findings, developed remediation recommendations, and produced professional documentation communicating both technical findings and business risk.
+
+---
+
+### Week 3 — Vulnerability Management & Threat Hunting
+
+During the final week of the externship, I expanded the vulnerability assessment into a broader vulnerability management and threat hunting exercise. The focus was on interpreting security findings, identifying potential attack patterns, evaluating organizational risk, and translating technical results into actionable recommendations.
+
+#### Activities Completed
+
+- Reviewed vulnerability assessment results to identify security weaknesses that could provide potential attack paths.
+- Analyzed exposed and commonly targeted services, including SSH, FTP, and HTTP.
+- Evaluated default credentials and weak authentication configurations as potential initial-access opportunities.
+- Assessed outdated SSH cryptographic configurations that could weaken secure communications.
+- Developed threat hunting observations based on vulnerability findings, exposed services, and system configurations.
+- Evaluated vulnerabilities using likelihood of exploitation and potential technical and business impact.
+- Developed a risk prioritization matrix to determine remediation priority.
+- Produced a professional vulnerability management and threat hunting report for technical and non-technical audiences.
+- Used AI assistance to develop a management-level executive summary while keeping the underlying findings and risk analysis grounded in the lab results.
+
+#### Threat Hunting Observations
+
+Three primary areas were identified for further investigation from a SOC analyst perspective:
+
+1. **Exposed and Commonly Targeted Services** — Services such as SSH, FTP, and HTTP increased the available attack surface and represented potential targets for reconnaissance, credential attacks, and exploitation.
+
+2. **Default Credentials and Authentication Weaknesses** — Successful authentication using known/default credentials indicated a significant risk of unauthorized access and provided a potential initial-access path without requiring exploitation of a software vulnerability.
+
+3. **Weak SSH Cryptographic Configuration** — Deprecated host key and key exchange algorithms weakened the security posture of SSH communications and demonstrated the importance of identifying insecure configurations in addition to software vulnerabilities.
+
+#### Risk Prioritization
+
+The findings were prioritized using both likelihood of exploitation and potential organizational impact. Remote code execution and default credential findings received the highest priority because they presented more direct paths to unauthorized access and system compromise, while deprecated cryptographic configurations represented lower immediate but still important security risks.
+
+#### Outcome
+
+By the end of Week 3, I had expanded the vulnerability assessment into a risk-based security analysis that incorporated vulnerability management, threat hunting observations, remediation prioritization, and executive-level communication. This reinforced the importance of interpreting scanner findings within the broader context of potential attack activity and organizational risk.
+
+---
+
+---
+
+---
+
+# Key Deliverables
+
+The SCIPP SOC Analyst Xternship resulted in the following technical and professional deliverables:
+
+- **Vulnerability Assessment Report** — Documented priority OpenVAS findings, CVSS/OpenVAS severity scores, technical impact, business impact, and recommended remediation.
+
+- **Vulnerability Management & Threat Hunting Report** — Expanded vulnerability findings into threat hunting observations and risk-based security analysis.
+
+- **Risk Prioritization Matrix** — Ranked identified vulnerabilities according to likelihood of exploitation and potential organizational impact.
+
+- **Executive Security Summary** — Translated technical vulnerability findings into concise, non-technical risk information for management.
+
+- **OpenVAS Scan Evidence** — Captured screenshots documenting target configuration, scan execution, scan completion, vulnerability findings, and supporting technical evidence.
+
+- **Lab Environment Documentation** — Documented the configuration and validation of the isolated VMware vulnerability assessment environment.
+
+---
+
+## Key Takeaways
+
+This externship strengthened my ability to move beyond simply identifying vulnerabilities and toward evaluating security findings in the context of exploitation likelihood, business impact, and remediation priority.
+
+The project also reinforced the importance of validating scanner findings, maintaining clear technical evidence, and communicating security risk effectively to both technical and non-technical stakeholders.
+
+---
+
+## Repository Structure
+
+```text
+SCIPP-SOC-Analyst-Xternship/
+│
+├── README.md
+├── Week-1/
+│   ├── README.md
+│   └── Screenshots/
+│
+├── Week-2/
+│   ├── README.md
+│   └── Screenshots/
+│
+├── Week-3/
+│   ├── README.md
+│   └── Screenshots/
+│
+└── Reports/
