@@ -65,6 +65,7 @@ The ARP table was reviewed to verify local network neighbor discovery. Metasploi
 
 ![Metasploitable2 ARP Table Validation](Screenshots/W1-03-Metasploitable-ARP-Table-Validation.png)
 
+*Figure 3 — ARP table showing successful resolution of the lab gateway on the local network.*
 
 ---
 
@@ -83,4 +84,36 @@ This configuration allowed the lab systems to communicate with each other while 
 ![VMware Host-Only Network Configuration](Screenshots/W1-04-VMware-Network-Settings.png)
 
 *Figure 4 — VMware Virtual Network Editor showing VMnet1 configured as a Host-Only network using the `192.168.5.0/24` subnet with VMware DHCP disabled.*
-*Figure 3 — ARP table showing successful resolution of the lab gateway on the local network.*
+
+
+---
+
+## Greenbone OpenVAS
+
+### Initial Deployment
+
+Greenbone OpenVAS Free 25.0.5 was deployed as the vulnerability scanner for the lab environment. The scanner was configured to communicate with the Metasploitable2 target through the isolated VMware Host-Only network.
+
+During the initial deployment, the OpenVAS setup wizard was used to complete the appliance configuration and prepare the scanner for operation.
+
+### Initial Setup
+
+![OpenVAS Initial Setup](Screenshots/W1-05-OpenVAS-Initial-Setup.png)
+
+*Figure 5 — OpenVAS Free 25.0.5 initial setup wizard prior to completing the scanner configuration.*
+
+### Network Configuration
+
+The OpenVAS appliance was assigned the static IPv4 address `192.168.5.5/24` on the `eth0` interface. This placed the scanner on the same `192.168.5.0/24` network as the Metasploitable2 target.
+
+![OpenVAS IP Configuration](Screenshots/W1-06-OpenVAS-IP-Configuration.png)
+
+*Figure 6 — OpenVAS network configuration showing `192.168.5.5/24` assigned to the `eth0` interface.*
+
+### Web Interface Availability
+
+After the initial configuration was completed, Greenbone OS successfully started and reported that the OpenVAS web interface was available at `192.168.5.5`.
+
+![OpenVAS Web Interface Available](Screenshots/W1-07-OpenVAS-Web-Interface-Available.png)
+
+*Figure 7 — Greenbone OS console confirming that the OpenVAS web interface is available at `192.168.5.5`.*
