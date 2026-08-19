@@ -116,4 +116,46 @@ After the initial configuration was completed, Greenbone OS successfully started
 
 ![OpenVAS Web Interface Available](Screenshots/W1-07-OpenVAS-Web-Interface-Available.png)
 
+---
+
+## Analyst Workstation
+
+### Original Week 1 Workstation
+
+During Week 1, Lubuntu was used as the analyst workstation for network validation, lab administration, and access to the OpenVAS web interface.
+
+The workstation was configured with the static IPv4 address `192.168.5.6/24` on the `ens33` interface and connected to the isolated `192.168.5.0/24` lab network.
+
+> **Environment Update:** This Lubuntu workstation was later replaced with an Ubuntu Linux workstation using `192.168.5.10`. The following screenshots are retained as historical evidence of the original Week 1 configuration.
+
+### Network Configuration
+
+The workstation's network configuration was validated using `hostname`, `ip addr`, and `ip route`. The `ens33` interface was confirmed operational with the address `192.168.5.6/24` and a route to the `192.168.5.0/24` lab network.
+
+![Lubuntu Network Configuration](Screenshots/W1-08-Lubuntu-Network-Configuration.png)
+
+*Figure 8 — Original Week 1 analyst workstation showing the `ens33` interface configured with `192.168.5.6/24`.*
+
+### Connectivity Validation
+
+Connectivity was tested from the analyst workstation to both primary lab systems:
+
+- OpenVAS scanner — `192.168.5.5`
+- Metasploitable2 target — `192.168.5.3`
+
+Both systems successfully responded to all four ICMP requests with 0% packet loss, confirming communication between the analyst workstation, vulnerability scanner, and target system.
+
+![Lubuntu Connectivity Validation](Screenshots/W1-09-Lubuntu-Connectivity-Validation.png)
+
+*Figure 9 — Successful ICMP connectivity from the analyst workstation to both OpenVAS and Metasploitable2.*
+
+### OpenVAS Dashboard Access
+
+After network connectivity was validated, the OpenVAS web interface was accessed from Firefox on the analyst workstation using `192.168.5.5`.
+
+Successful access to the dashboard confirmed that the workstation could communicate with the OpenVAS web service and that the scanner's management interface was operational.
+
+![Lubuntu OpenVAS Dashboard](Screenshots/W1-10-Lubuntu-OpenVAS-Dashboard.png)
+
+*Figure 10 — OpenVAS dashboard successfully accessed from the original Week 1 analyst workstation.*
 *Figure 7 — Greenbone OS console confirming that the OpenVAS web interface is available at `192.168.5.5`.*
