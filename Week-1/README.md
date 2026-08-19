@@ -65,4 +65,22 @@ The ARP table was reviewed to verify local network neighbor discovery. Metasploi
 
 ![Metasploitable2 ARP Table Validation](Screenshots/W1-03-Metasploitable-ARP-Table-Validation.png)
 
+
+---
+
+## VMware Host-Only Network
+
+### Network Configuration
+
+The lab environment was configured using a VMware Host-Only network to provide an isolated network for communication between the vulnerability scanner, analyst workstation, and vulnerable target.
+
+The `VMnet1` virtual network was configured with the `192.168.5.0/24` subnet. VMware DHCP was disabled so that systems within the lab could be assigned static IP addresses.
+
+This configuration allowed the lab systems to communicate with each other while keeping the intentionally vulnerable Metasploitable2 target isolated from the external network.
+
+### Validation & Evidence
+
+![VMware Host-Only Network Configuration](Screenshots/W1-04-VMware-Network-Settings.png)
+
+*Figure 4 — VMware Virtual Network Editor showing VMnet1 configured as a Host-Only network using the `192.168.5.0/24` subnet with VMware DHCP disabled.*
 *Figure 3 — ARP table showing successful resolution of the lab gateway on the local network.*
