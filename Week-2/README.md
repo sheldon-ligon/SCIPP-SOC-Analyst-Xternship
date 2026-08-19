@@ -128,7 +128,7 @@ The use of default credentials could allow an unauthorized user to authenticate 
 
 **Remediation:** Remove all default credentials, enforce unique strong passwords, and disable FTP if the service is not required. Where file-transfer functionality is necessary, a secure alternative such as SFTP should be considered.
 
-![FTP Default Credentials](screenshots/W2-10-ftp-default-credentials-analysis-01.png)
+![FTP Default Credentials](Screenshots/W2-10-ftp-default-credentials-analysis-01.png)
 
 *Figure XX — OpenVAS identifying successful FTP authentication using default credentials on the Metasploitable2 target.*
 
@@ -142,7 +142,7 @@ The use of outdated host key algorithms weakens the cryptographic security of SS
 
 **Remediation:** Disable `ssh-dss` and other deprecated host key algorithms and configure the SSH service to use modern, strongly supported cryptographic algorithms.
 
-![Weak SSH Host Key](screenshots/W2-11-Weak-SSH-Host-Key-Analysis.png)
+![Weak SSH Host Key](Screenshots/W2-11-Weak-SSH-Host-Key-Analysis.png)
 
 *Figure XX — OpenVAS identifying the deprecated `ssh-dss` host key algorithm supported by the SSH service.*
 
@@ -161,6 +161,16 @@ These algorithms rely on deprecated SHA-1 hashing and, in the case of Group 1, a
 
 **Remediation:** Disable the deprecated SHA-1-based Diffie-Hellman key exchange algorithms and configure SSH to use modern alternatives such as Curve25519 or other currently recommended key exchange methods.
 
-![Weak SSH KEX](screenshots/W2-12-Weak-SSH-Key-Exchange-Analysis-01.png)
+![Weak SSH KEX](Screenshots/W2-12-Weak-SSH-Key-Exchange-Analysis-01.png)
 
-*Figure XX — OpenVAS identifying deprecated SHA-1-based Diffie-Hellman key exchange algorithms supported by the SSH service.*
+*Figure XX — OpenVAS identifying deprecated SHA-1-based Diffie-Hellman key exchange algorithms 
+
+
+
+## Full OpenVAS Scan Report
+
+The complete OpenVAS-generated vulnerability assessment report is included
+for reference and contains the full technical output, vulnerability details,
+CVSS scores, QoD values, and remediation guidance identified during the scan.
+
+[View the Full OpenVAS Scan Report](reports/OpenVAS-Week-2-Vulnerability-Scan.pdf) supported by the SSH service.*
